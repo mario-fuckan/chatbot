@@ -1,10 +1,15 @@
 {
   "name": "chatbot-primjer",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "format": "oxfmt"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "oxfmt": "^0.40.0",
+    "oxlint": "^1.55.0"
   },
   "peerDependencies": {
     "typescript": "^5"

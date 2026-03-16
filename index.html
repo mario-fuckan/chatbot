@@ -1,41 +1,41 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script type="module">
-            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-            Chatbot.init({
-                chatflowid: "bbcc45fd-b7c5-475b-990b-b9c89c00118e",
-                apiHost: "https://cloud.flowiseai.com",
-                chatflowConfig: {
-                    /* Chatflow Config */
-                },
-                observersConfig: {
-                    /* Observers Config */
-                },
-                theme: {
-                    button: {
-                        backgroundColor: '#FF0000',
-                        right: 20,
-                        bottom: 20,
-                        size: 67,
-                        dragAndDrop: false,
-                        iconColor: 'white',
-                        customIconSrc: './assets/chat-bubble.png',
-                        autoWindowOpen: {
-                            autoOpen: false,
-                        }
-                    },
-                    tooltip: {
-                        showTooltip: false,
-                        tooltipMessage: 'Hi There 👋!',
-                        tooltipBackgroundColor: 'black',
-                        tooltipTextColor: 'white',
-                        tooltipFontSize: 16
-                    },
-                    /*
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+        chatflowid: "e6e06621-a154-49c3-bb62-943a8e38589f",
+        apiHost: "https://chatbot.mariofuckan.com",
+        chatflowConfig: {
+          /* Chatflow Config */
+        },
+        observersConfig: {
+          /* Observers Config */
+        },
+        theme: {
+          button: {
+            backgroundColor: "#FF0000",
+            right: 20,
+            bottom: 20,
+            size: 67,
+            dragAndDrop: false,
+            iconColor: "white",
+            customIconSrc: "./assets/chat-bubble.png",
+            autoWindowOpen: {
+              autoOpen: false,
+            },
+          },
+          tooltip: {
+            showTooltip: false,
+            tooltipMessage: "Hi There 👋!",
+            tooltipBackgroundColor: "black",
+            tooltipTextColor: "white",
+            tooltipFontSize: 16,
+          },
+          /*
                     disclaimer: {
                         title: 'Disclaimer',
                         message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
@@ -47,129 +47,135 @@
                         backgroundColor: 'white'
                     },
                     */
-                    customCSS: `
+          customCSS: `
                     .chatbot-input {
                       border-radius: 40px !important;
                     }
                     `,
-                    chatWindow: {
-                        showTitle: true,
-                        showAgentMessages: true,
-                        title: 'ChatBot',
-                        titleTextColor: '#ffffff',
-                        titleAvatarSrc: './assets/bot-white.png',
-                        welcomeMessage: 'Pozdrav, kako Vam mogu pomoći?',
-                        errorMessage: '',
-                        backgroundColor: '#F3F3F3',
-                        backgroundImage: '',
-                        height: 600,
-                        width: 400,
-                        fontSize: 16,
-                        /*
+          chatWindow: {
+            showTitle: true,
+            showAgentMessages: true,
+            title: "ChatBot",
+            titleTextColor: "#ffffff",
+            titleAvatarSrc: "./assets/bot-white.png",
+            welcomeMessage: "Pozdrav, kako Vam mogu pomoći?",
+            errorMessage: "",
+            backgroundColor: "#F3F3F3",
+            backgroundImage: "",
+            height: 600,
+            width: 400,
+            fontSize: 16,
+            /*
                         starterPrompts: [
                             "What is a bot?",
                             "Who are you?"
                         ],
                         */
-                        starterPromptFontSize: 15,
-                        clearChatOnReload: false,
-                        sourceDocsTitle: 'Sources:',
-                        renderHTML: true,
-                        botMessage: {
-                            backgroundColor: '#E1E1E1',
-                            textColor: '#303235',
-                            showAvatar: true,
-                            avatarSrc: './assets/bot-red.png'
-                        },
-                        userMessage: {
-                            backgroundColor: '#6C6C6C',
-                            textColor: '#ffffff',
-                            showAvatar: false,
-                            avatarSrc: ''
-                        },
-                        textInput: {
-                            placeholder: '',
-                            backgroundColor: '#ffffff',
-                            textColor: '#303235',
-                            sendButtonColor: '#D9D9D9',
-                            maxChars: 50,
-                            maxCharsWarningMessage: 'Maksimalni broj slova je 50. Molim Vas unesite manji broj slova.',
-                            autoFocus: true,
-                            sendMessageSound: false,
-                            sendSoundLocation: '',
-                            receiveMessageSound: false,
-                            receiveSoundLocation: ''
-                        },
-                        feedback: {
-                            color: '#303235'
-                        },
-                        dateTimeToggle: {
-                            date: true,
-                            time: true
-                        },
-                        footer: {
-                            textColor: '',
-                            text: '',
-                            company: '',
-                            companyLink: ''
-                        }
-                    }
-                }
-            })
-        </script>
-    </head>
-    <body>
-        <h2>Chatbot je treniran na sljedećim podacima:</h2>
-        <ul>
-          <li>ambulanta-bedekovcina.txt</li>
-          <li>ambulanta-desinic.txt</li>
-          <li>ambulanta-donja-stubica.txt</li>
-          <li>ambulanta-durmanec.txt</li>
-          <li>ambulanta-gornja-stubica.txt</li>
-          <li>ambulanta-hum-na-sutli.txt</li>
-          <li>ambulanta-jesenje.txt</li>
-          <li>ambulanta-klanjec.txt</li>
-          <li>ambulanta-krapina.txt</li>
-          <li>ambulanta-krapinske-toplice.txt</li>
-          <li>ambulanta-kumrovec.txt</li>
-          <li>ambulanta-marija-bistrica.txt</li>
-          <li>ambulanta-oroslavje.txt</li>
-          <li>ambulanta-petrovsko.txt</li>
-          <li>ambulanta-pregrada.txt</li>
-          <li>ambulanta-stubicke-toplice.txt</li>
-          <li>ambulanta-sveti-kriz-zacretje.txt</li>
-          <li>ambulanta-tuheljske-toplice.txt</li>
-          <li>ambulanta-veliko-trgovisce.txt</li>
-          <li>ambulanta-zabok.txt</li>
-          <li>ambulanta-zagorska-sela.txt</li>
-          <li>ambulanta-radoboj.txt</li>
-          <li>o-nama.txt</li>
-          <li>palijativa.txt</li>
-          <li>sluzbenik-za-informiranje.txt</li>
-          <li>uprava.txt</li>
-          <li>upravno-vijece.txt</li>
-          <li>zastita-osobnih-podataka.txt</li>
-        </ul>
-    </body>
+            starterPromptFontSize: 15,
+            clearChatOnReload: false,
+            sourceDocsTitle: "Sources:",
+            renderHTML: true,
+            botMessage: {
+              backgroundColor: "#E1E1E1",
+              textColor: "#303235",
+              showAvatar: true,
+              avatarSrc: "./assets/bot-red.png",
+            },
+            userMessage: {
+              backgroundColor: "#6C6C6C",
+              textColor: "#ffffff",
+              showAvatar: false,
+              avatarSrc: "",
+            },
+            textInput: {
+              placeholder: "",
+              backgroundColor: "#ffffff",
+              textColor: "#303235",
+              sendButtonColor: "#D9D9D9",
+              maxChars: 50,
+              maxCharsWarningMessage:
+                "Maksimalni broj slova je 50. Molim Vas unesite manji broj slova.",
+              autoFocus: true,
+              sendMessageSound: false,
+              sendSoundLocation: "",
+              receiveMessageSound: false,
+              receiveSoundLocation: "",
+            },
+            feedback: {
+              color: "#303235",
+            },
+            dateTimeToggle: {
+              date: true,
+              time: true,
+            },
+            footer: {
+              textColor: "",
+              text: "",
+              company: "",
+              companyLink: "",
+            },
+          },
+        },
+      })
+    </script>
+  </head>
+  <body>
+    <h2>Chatbot je treniran na sljedećim podacima:</h2>
+    <ul>
+      <li>
+        <a href="https://dzkzz.hr/o-nama/" target="_blank">O nama</a>
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/upravno-vijece/" target="_blank">Upravno vijeće</a>
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/uprava/" target="_blank">Uprava</a>
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/palijativa/" target="_blank">Palijativa</a>
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/tecajevi-za-trudnice/" target="_blank">Tečajevi za trudnice</a>
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/grupe-za-potporu-dojenja/" target="_blank"
+          >Grupe za potporu dojenja</a
+        >
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/sluzbenik-za-informiranje/" target="_blank">
+          Službenik za informiranje</a
+        >
+      </li>
+      <li>
+        <a href="https://dzkzz.hr/zastita-osobnih-podataka/" target="_blank">
+          Zaštita osobnih podataka</a
+        >
+      </li>
+      <li>
+        <a href="https://dzkzz.hr" target="_blank">Sve ambulante</a>
+      </li>
+    </ul>
+  </body>
 
-    <style>
+  <style>
     :root {
-        font-family: monospace;
+      font-family: monospace;
     }
 
     h2 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
 
     ul {
-        width: max-content;
-        column-gap: 80px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      width: max-content;
+      column-gap: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     li {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
-    </style>
+  </style>
 </html>
