@@ -4,75 +4,226 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script type="module"></script>
+    <link rel="stylesheet" href="main.css" />
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+      Chatbot.init({
+        chatflowid: "e6e06621-a154-49c3-bb62-943a8e38589f",
+        apiHost: "https://chatbot.mariofuckan.com",
+        chatflowConfig: {
+          /* Chatflow Config */
+        },
+        observersConfig: {
+          /* Observers Config */
+        },
+        theme: {
+          button: {
+            backgroundColor: "#FF0000",
+            right: 40,
+            bottom: 40,
+            size: 67,
+            dragAndDrop: false,
+            iconColor: "white",
+            customIconSrc:
+              "https://d2a36f0cf527f47ba96097dbd00ed260.cdn.bubble.io/f1774525391217x104636647025312180/chat-bubble.png",
+            autoWindowOpen: {
+              autoOpen: false
+            }
+          },
+          tooltip: {
+            showTooltip: false,
+            tooltipMessage: "Hi There 👋!",
+            tooltipBackgroundColor: "black",
+            tooltipTextColor: "white",
+            tooltipFontSize: 16
+          },
+          /*
+                  disclaimer: {
+                      title: 'Disclaimer',
+                      message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                      textColor: 'black',
+                      buttonColor: '#3b82f6',
+                      buttonText: 'Start Chatting',
+                      buttonTextColor: 'white',
+                      blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                      backgroundColor: 'white'
+                  },
+                  */
+          customCSS: `
+                  .chatbot-input {
+                    border-radius: 40px !important;
+                  }
+                  `,
+          chatWindow: {
+            showTitle: true,
+            showAgentMessages: false,
+            title: "Chatbot",
+            titleTextColor: "#ffffff",
+            titleAvatarSrc:
+              "https://d2a36f0cf527f47ba96097dbd00ed260.cdn.bubble.io/f1774525387067x141005625618797260/bot-white.png",
+            welcomeMessage: "Pozdrav, kako Vam mogu pomoći?",
+            errorMessage: "",
+            backgroundColor: "#F3F3F3",
+            backgroundImage: "",
+            height: 600,
+            width: 400,
+            fontSize: 16,
+            /*
+                      starterPrompts: [
+                          "What is a bot?",
+                          "Who are you?"
+                      ],
+                      */
+            starterPromptFontSize: 15,
+            clearChatOnReload: false,
+            sourceDocsTitle: "Sources:",
+            renderHTML: true,
+            botMessage: {
+              backgroundColor: "#E1E1E1",
+              textColor: "#303235",
+              showAvatar: true,
+              avatarSrc:
+                "https://d2a36f0cf527f47ba96097dbd00ed260.cdn.bubble.io/f1774525381451x268606998969008960/bot-red.png"
+            },
+            userMessage: {
+              backgroundColor: "#6C6C6C",
+              textColor: "#ffffff",
+              showAvatar: false,
+              avatarSrc: ""
+            },
+            textInput: {
+              placeholder: "",
+              backgroundColor: "#ffffff",
+              textColor: "#303235",
+              sendButtonColor: "#D9D9D9",
+              maxChars: 200,
+              maxCharsWarningMessage:
+                "Maksimalni broj slova je 200. Molim Vas unesite manji broj slova.",
+              autoFocus: true,
+              sendMessageSound: false,
+              sendSoundLocation: "",
+              receiveMessageSound: false,
+              receiveSoundLocation: ""
+            },
+            feedback: {
+              color: "#303235"
+            },
+            dateTimeToggle: {
+              date: true,
+              time: true
+            },
+            footer: {
+              textColor: "",
+              text: "",
+              company: "",
+              companyLink: ""
+            }
+          }
+        }
+      })
+    </script>
   </head>
   <body>
-    <h2>Chatbot je treniran na sljedećim podacima:</h2>
-    <ul>
-      <li>
-        <a href="https://dzkzz.hr/o-nama/" target="_blank">O nama</a>
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/upravno-vijece/" target="_blank"
-          >Upravno vijeće</a
-        >
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/uprava/" target="_blank">Uprava</a>
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/palijativa/" target="_blank">Palijativa</a>
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/tecajevi-za-trudnice/" target="_blank"
-          >Tečajevi za trudnice</a
-        >
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/grupe-za-potporu-dojenja/" target="_blank"
-          >Grupe za potporu dojenja</a
-        >
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/sluzbenik-za-informiranje/" target="_blank">
-          Službenik za informiranje</a
-        >
-      </li>
-      <li>
-        <a href="https://dzkzz.hr/zastita-osobnih-podataka/" target="_blank">
-          Zaštita osobnih podataka</a
-        >
-      </li>
-      <li>
-        <a href="https://dzkzz.hr" target="_blank">Sve ambulante</a>
-      </li>
-    </ul>
+    <main>
+      <section>
+        <h1>Opće znanje</h1>
+        <ul>
+          <li>
+            <a href="https://dzkzz.hr/o-nama/" target="_blank">O nama</a>
+          </li>
+          <li>
+            <a href="https://dzkzz.hr/upravno-vijece/" target="_blank"
+              >Upravno vijeće</a
+            >
+          </li>
+          <li>
+            <a href="https://dzkzz.hr/uprava/" target="_blank">Uprava</a>
+          </li>
+          <li>
+            <a href="https://dzkzz.hr/palijativa/" target="_blank"
+              >Palijativa</a
+            >
+          </li>
+          <li>
+            <a href="https://dzkzz.hr/tecajevi-za-trudnice/" target="_blank"
+              >Tečajevi za trudnice</a
+            >
+          </li>
+          <li>
+            <a href="https://dzkzz.hr/grupe-za-potporu-dojenja/" target="_blank"
+              >Grupe za potporu dojenja</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://dzkzz.hr/sluzbenik-za-informiranje/"
+              target="_blank"
+            >
+              Službenik za informiranje</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://dzkzz.hr/zastita-osobnih-podataka/"
+              target="_blank"
+            >
+              Zaštita osobnih podataka</a
+            >
+          </li>
+          <li>
+            <a href="https://dzkzz.hr" target="_blank">Sve ambulante</a>
+          </li>
+        </ul>
+        <hr />
+        <h1>Pitanja</h1>
+        <p>Tko je ravnateljica?</p>
+        <p>Tko je informatičar?</p>
+        <p>Kada radi ambulanta Desinić?</p>
+      </section>
+      <section>
+        <h1>Pravilnici</h1>
+        <ul>
+          <li>
+            <a
+              href="https://dzkzz.hr/opci-akti-zakoni-i-propisi/"
+              target="_blank"
+              >Pravilnici</a
+            >
+          </li>
+        </ul>
+        <hr />
+        <h1>Pitanja</h1>
+        <p>Pravilnik o radu, članak 5</p>
+        <p>Koliko dugo se čuvaju snimljeni podaci?</p>
+        <p>Koliko često moramo ispitivati hidrantsku mrežu?</p>
+      </section>
+      <section>
+        <h1>Zakoni i propisi</h1>
+        <ul>
+          <li>
+            <a
+              href="https://dzkzz.hr/opci-akti-zakoni-i-propisi/"
+              target="_blank"
+              >Zakoni i propisi</a
+            >
+          </li>
+        </ul>
+        <hr />
+        <h1>Pitanja</h1>
+        <p>Imam li pravo na doktora?</p>
+      </section>
+      <section>
+        <h1>Ostalo</h1>
+        <ul>
+          <li>Godišnje zamjene</li>
+          <li>Radno vrijeme</li>
+        </ul>
+        <hr />
+        <h1>Pitanja</h1>
+        <p>Kada radi doktor u Loboru?</p>
+        <p>Ima li zamjena u Maču?</p>
+      </section>
+    </main>
   </body>
-
-  <style>
-    :root {
-      font-family: monospace;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    ul {
-      width: max-content;
-      column-gap: 80px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    li {
-      font-size: 1.3rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </html>
